@@ -6,8 +6,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-    title: 'SaveApis',
-    tagline: 'MC-Names Api',
+    title: 'MC-Names Api',
+    tagline: '',
     url: 'https://your-docusaurus-test-site.com',
     baseUrl: '/',
     onBrokenLinks: 'throw',
@@ -17,11 +17,11 @@ const config = {
     // GitHub pages deployment config.
     // If you aren't using GitHub pages, you don't need these.
     organizationName: 'SaveApis', // Usually your GitHub org/user_name.
-    projectName: 'docusaurus', // Usually your repo name.
+    projectName: 'MC-NamesApi', // Usually your repo name.
 
     // Even if you don't use internalization, you can use this field to set useful
     // metadata like html lang. For example, if your site is Chinese, you may want
-    // to replace "en" with "zh-Hans".
+    // to replace "de" with "zh-Hans".
     i18n: {
         defaultLocale: 'de',
         locales: ['de', 'en'],
@@ -33,18 +33,10 @@ const config = {
             /** @type {import('@docusaurus/preset-classic').Options} */
             ({
                 docs: {
+                    path: 'docs',
                     sidebarPath: require.resolve('./sidebars.js'),
                     // Please change this to your repo.
                     // Remove this to remove the "edit this page" links.
-                    editUrl:
-                        'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-                },
-                blog: {
-                    showReadingTime: true,
-                    // Please change this to your repo.
-                    // Remove this to remove the "edit this page" links.
-                    editUrl:
-                        'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
                 },
                 blog: false,
                 theme: {
@@ -53,12 +45,11 @@ const config = {
             }),
         ],
     ],
-
     themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
         ({
             navbar: {
-                title: 'MC-Names REST-API',
+                title: 'MC-Names',
                 logo: {
                     alt: 'MC-Names Logo',
                     src: 'img/logo.svg',
@@ -74,15 +65,21 @@ const config = {
                     },
                     {
                         type: 'doc',
-                        docId: 'intro',
+                        docId: 'rest-api/intro',
                         position: 'left',
-                        label: 'Tutorial',
+                        label: 'REST'
                     },
-                    {to: '/blog', label: 'Blog', position: 'left'},
                     {
-                        href: 'https://github.com/facebook/docusaurus',
-                        label: 'GitHub',
-                        position: 'right',
+                        type: 'doc',
+                        docId: 'c-sharp-api/intro',
+                        position: 'left',
+                        label: 'C#'
+                    },
+                    {
+                        type: 'doc',
+                        docId: 'java-api/intro',
+                        position: 'left',
+                        label: 'Java'
                     },
                 ],
             },
@@ -93,8 +90,16 @@ const config = {
                         title: 'Docs',
                         items: [
                             {
-                                label: 'Tutorial',
-                                to: '/docs/intro',
+                                label: 'REST-API',
+                                to: '/docs/rest-api/intro',
+                            },
+                            {
+                                label: 'Java Library',
+                                to: '/docs/java-api/intro',
+                            },
+                            {
+                                label: 'C# Library',
+                                to: '/docs/c-sharp-api/intro',
                             },
                         ],
                     },
@@ -102,16 +107,8 @@ const config = {
                         title: 'Community',
                         items: [
                             {
-                                label: 'Stack Overflow',
-                                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-                            },
-                            {
                                 label: 'Discord',
                                 href: 'https://discordapp.com/invite/docusaurus',
-                            },
-                            {
-                                label: 'Twitter',
-                                href: 'https://twitter.com/docusaurus',
                             },
                         ],
                     },
@@ -119,17 +116,26 @@ const config = {
                         title: 'More',
                         items: [
                             {
-                                label: 'Blog',
-                                to: '/blog',
+                                label: 'GitHub',
+                                href: 'https://github.com/SaveApis/MC-NamesApi',
+                            },
+                        ],
+                    },
+                    {
+                        title: 'Other',
+                        items: [
+                            {
+                                label: 'Datenschutz',
+                                href: 'https://github.com/SaveApis/MC-NamesApi',
                             },
                             {
-                                label: 'GitHub',
-                                href: 'https://github.com/facebook/docusaurus',
+                                label: 'Impressum',
+                                href: 'https://github.com/SaveApis/MC-NamesApi',
                             },
                         ],
                     },
                 ],
-                copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+                copyright: `Copyright © ${new Date().getFullYear()} MC-NamesApi, Inc. Built with Docusaurus.`,
             },
             prism: {
                 theme: lightCodeTheme,
