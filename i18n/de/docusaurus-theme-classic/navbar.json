@@ -1,0 +1,18 @@
+{
+  "title": {
+    "message": "MC-Names",
+    "description": "The title in the navbar"
+  },
+  "item.label.REST": {
+    "message": "REST",
+    "description": "Navbar item with label REST"
+  },
+  "item.label.C#": {
+    "message": "C#",
+    "description": "Navbar item with label C#"
+  },
+  "item.label.Java": {
+    "message": "Java",
+    "description": "Navbar item with label Java"
+  }
+}
