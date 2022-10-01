@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
     title: 'MC-Names Api',
     tagline: '',
-    url: 'https://your-docusaurus-test-site.com',
+    url: 'https://saveapis.com',
     baseUrl: '/',
     onBrokenLinks: 'throw',
     onBrokenMarkdownLinks: 'warn',
