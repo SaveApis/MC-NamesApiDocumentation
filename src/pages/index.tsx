@@ -29,7 +29,7 @@ function HomepageHeader() {
                     <Link
                         className="button button--secondary button--lg"
                         to="/docs/rest-api/intro">
-                        Zur Dokumentation
+                        <Translate id="button.toDocumentation">Zur Dokumentation</Translate>
                     </Link>
                 </div>
             </div>

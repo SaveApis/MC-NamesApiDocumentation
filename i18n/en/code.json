@@ -4,8 +4,20 @@
     "description": "The Project Description"
   },
   "title.include": {
-    "message": "Included are a REST API, a Java Library and a C# Library.",
+    "message": "Included are a REST-API, a Java Library and a C# Library.",
     "description": "Included components in Project"
+  },
+  "feature.rest": {
+    "message": "REST-API to access the available data."
+  },
+  "button.toDocumentation": {
+    "message": "To Documentation"
+  },
+  "feature.c#": {
+    "message": "C# Library to access the REST-API."
+  },
+  "feature.java": {
+    "message": "Java Library to access the REST-API."
   },
   "theme.ErrorPageContent.title": {
     "message": "This page crashed.",
@@ -47,6 +59,10 @@
     "message": "caution",
     "description": "The default label used for the Caution admonition (:::caution)"
   },
+  "theme.BackToTopButton.buttonAriaLabel": {
+    "message": "Scroll back to top",
+    "description": "The ARIA label for the back to top button"
+  },
   "theme.blog.archive.title": {
     "message": "Archive",
     "description": "The page & hero title of the blog archive page"
@@ -54,10 +70,6 @@
   "theme.blog.archive.description": {
     "message": "Archive",
     "description": "The page & hero description of the blog archive page"
-  },
-  "theme.BackToTopButton.buttonAriaLabel": {
-    "message": "Scroll back to top",
-    "description": "The ARIA label for the back to top button"
   },
   "theme.blog.paginator.navAriaLabel": {
     "message": "Blog list page navigation",
@@ -142,6 +154,10 @@
   "theme.docs.versionBadge.label": {
     "message": "Version: {versionLabel}"
   },
+  "theme.common.editThisPage": {
+    "message": "Edit this page",
+    "description": "The link label to edit the current page"
+  },
   "theme.docs.versions.unreleasedVersionLabel": {
     "message": "This is unreleased documentation for {siteTitle} {versionLabel} version.",
     "description": "The label used to tell the user that he's browsing an unreleased doc version"
@@ -157,10 +173,6 @@
   "theme.docs.versions.latestVersionLinkLabel": {
     "message": "latest version",
     "description": "The label used for the latest version suggestion link label"
-  },
-  "theme.common.editThisPage": {
-    "message": "Edit this page",
-    "description": "The link label to edit the current page"
   },
   "theme.common.headingLinkTitle": {
     "message": "Direct link to heading",

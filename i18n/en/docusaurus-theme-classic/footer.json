@@ -36,15 +36,15 @@
     "description": "The label of footer link with label=GitHub linking to https://github.com/SaveApis/MC-NamesApi"
   },
   "link.item.label.Datenschutz": {
-    "message": "Privacy",
+    "message": "Datenschutz",
     "description": "The label of footer link with label=Datenschutz linking to https://github.com/SaveApis/MC-NamesApi"
   },
   "link.item.label.Impressum": {
-    "message": "Imprint",
+    "message": "Impressum",
     "description": "The label of footer link with label=Impressum linking to https://github.com/SaveApis/MC-NamesApi"
   },
   "copyright": {
-    "message": "Copyright © 2022 MC-NamesApi, Inc. Built with Docusaurus.",
+    "message": "Copyright © 2022 SaveApis, Inc. Built with Docusaurus.",
     "description": "The footer copyright"
   }
 }

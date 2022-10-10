@@ -4,11 +4,11 @@ import styles from './styles.module.css';
 import Link from "@docusaurus/Link";
 
 import mainStyles from '../../pages/index.module.css'
+import Translate from "@docusaurus/Translate";
 
 type FeatureItem = {
     title: string;
     Svg: React.ComponentType<React.ComponentProps<'svg'>>;
-    description: JSX.Element;
     action: string;
 };
 
@@ -16,21 +16,11 @@ const FeatureList: FeatureItem[] = [
     {
         title: 'REST API',
         Svg: require('@site/static/img/rest-api.svg').default,
-        description: (
-            <>
-                REST-API um auf die verfügbaren Daten zuzugreifen.
-            </>
-        ),
         action: 'docs/rest-api/intro'
     },
     {
         title: 'C# Library',
         Svg: require('@site/static/img/c#-library.svg').default,
-        description: (
-            <>
-                C# Klassenbibliothek um auf die REST-API zuzugreifen.
-            </>
-        ),
         action: 'docs/rest-api/intro'
     },
     /*
@@ -40,15 +30,11 @@ const FeatureList: FeatureItem[] = [
     {
         title: 'Java Library',
         Svg: require('@site/static/img/java-api.svg').default,
-        description: (
-            <>
-                Java Klassenbibliothek um auf die REST-API zuzugreifen.
-            </>
-        ),
         action: 'docs/rest-api/intro'
     },
 ];
 
+/*
 function Feature({title, Svg, description, action}: FeatureItem) {
     return (
         <div className={clsx('col col--4')}>
@@ -69,15 +55,93 @@ function Feature({title, Svg, description, action}: FeatureItem) {
         </div>
     );
 }
+ */
+
+function RestFeature({title, Svg, action}: FeatureItem) {
+    return (
+        <div className={clsx('col col--4')}>
+            <div className="text--center">
+                <Svg className={styles.featureSvg} role="img"/>
+            </div>
+            <br/>
+            <div className="text--center padding-horiz--md">
+                <h3>{title}</h3>
+                <Translate id="feature.rest">REST-API um auf die verfügbaren Daten zuzugreifen.</Translate>
+            </div>
+            <br/>
+            <br/>
+            <div className={mainStyles.buttons}>
+                <Link
+                    className="button button--secondary button--lg"
+                    to={action}>
+                    <Translate id="button.toDocumentation">Zur Dokumentation</Translate>
+                </Link>
+            </div>
+        </div>
+    );
+}
+
+function CSharpFeature({title, Svg, action}: FeatureItem) {
+    return (
+        <div className={clsx('col col--4')}>
+            <div className="text--center">
+                <Svg className={styles.featureSvg} role="img"/>
+            </div>
+            <br/>
+            <div className="text--center padding-horiz--md">
+                <h3>{title}</h3>
+                <Translate id="feature.c#">C# Klassenbibliothek um auf die REST-API zuzugreifen.</Translate>
+            </div>
+            <br/>
+            <br/>
+            <div className={mainStyles.buttons}>
+                <Link
+                    className="button button--secondary button--lg"
+                    to={action}>
+                    <Translate id="button.toDocumentation">Zur Dokumentation</Translate>
+                </Link>
+            </div>
+        </div>
+    );
+}
+
+function JavaFeature({title, Svg, action}: FeatureItem) {
+    return (
+        <div className={clsx('col col--4')}>
+            <div className="text--center">
+                <Svg className={styles.featureSvg} role="img"/>
+            </div>
+            <br/>
+            <div className="text--center padding-horiz--md">
+                <h3>{title}</h3>
+                <Translate id="feature.java">Java Klassenbibliothek um auf die REST-API zuzugreifen.</Translate>
+            </div>
+            <br/>
+            <br/>
+            <div className={mainStyles.buttons}>
+                <Link
+                    className="button button--secondary button--lg"
+                    to={action}>
+                    <Translate id="button.toDocumentation">Zur Dokumentation</Translate>
+                </Link>
+            </div>
+        </div>
+    );
+}
 
 export default function HomepageFeatures(): JSX.Element {
     return (
         <section className={styles.features}>
             <div className="container">
                 <div className="row">
-                    {FeatureList.map((props, idx) => (
+                    <RestFeature action={FeatureList[0].action} title={FeatureList[0].title} Svg={FeatureList[0].Svg}/>
+                    <CSharpFeature action={FeatureList[1].action} title={FeatureList[1].title}
+                                   Svg={FeatureList[1].Svg}/>
+                    <JavaFeature action={FeatureList[2].action} title={FeatureList[2].title} Svg={FeatureList[2].Svg}/>
+
+                    {/*FeatureList.map((props, idx) => (
                         <Feature key={idx} {...props} />
-                    ))}
+                    )*/}
                 </div>
             </div>
         </section>

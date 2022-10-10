@@ -135,7 +135,7 @@ const config = {
                         ],
                     },
                 ],
-                copyright: `Copyright © ${new Date().getFullYear()} MC-NamesApi, Inc. Built with Docusaurus.`,
+                copyright: `Copyright © ${new Date().getFullYear()} SaveApis, Inc. Built with Docusaurus.`,
             },
             prism: {
                 theme: lightCodeTheme,
